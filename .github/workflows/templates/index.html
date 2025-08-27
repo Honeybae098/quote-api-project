@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote of the Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styles for the whole page */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f2f5; /* Light grey background */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0;
+        }
+
+        /* The card that holds the quote */
+        .quote-card {
+            background-color: white;
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            padding: 40px;
+            max-width: 600px;
+            text-align: center;
+            border-left: 8px solid #007bff; /* Blue accent border */
+        }
+
+        /* The quote text itself */
+        .quote-text {
+            font-size: 1.5em; /* Larger font size */
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* The author of the quote */
+        .quote-author {
+            font-size: 1.1em;
+            font-weight: bold;
+            text-align: right;
+            color: #007bff; /* Blue to match the border */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quote-card">
+        <p class="quote-text">"{{ quote_text }}"</p>
+        <p class="quote-author">- {{ quote_author }}</p>
+    </div>
+
+</body>
+</html>
