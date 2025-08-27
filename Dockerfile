@@ -10,6 +10,10 @@ COPY requirements.txt .
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
+# --- ADD THIS LINE ---
+# Copy the templates folder into the container
+COPY templates templates
+
 # Copy the rest of the application code into the container
 COPY . .
 
