@@ -26,4 +26,6 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
+          # This new line builds for both Intel and Apple Silicon CPUs
+          platforms: linux/amd64,linux/arm64
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/quote-api:latest,${{ secrets.DOCKERHUB_USERNAME }}/quote-api:${{ github.sha }}
