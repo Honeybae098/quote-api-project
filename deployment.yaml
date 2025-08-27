@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quote-api-deployment
+  labels:
+    app: quote-api
+spec:
+  replicas: 2 # Run 2 instances of the pod for high availability
+  selector:
+    matchLabels:
+      app: quote-api
+  template:
+    metadata:
+      labels:
+        app: quote-api
+    spec:
+  containers:
+  - name: quote-api-container
+    image: soputhearith/quote-api:latest
+        ports:
+        - containerPort: 8080
+        # Health checks to ensure the container is running and ready
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 5
