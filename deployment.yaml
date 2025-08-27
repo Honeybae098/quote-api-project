@@ -5,7 +5,7 @@ metadata:
   labels:
     app: quote-api
 spec:
-  replicas: 2 # Run 2 instances of the pod for high availability
+  replicas: 2
   selector:
     matchLabels:
       app: quote-api
@@ -14,12 +14,11 @@ spec:
       labels:
         app: quote-api
     spec:
-  containers:
-  - name: quote-api-container
-    image: soputhearith/quote-api:latest
+      containers:
+      - name: quote-api-container
+        image: soputhearith/quote-api:latest
         ports:
         - containerPort: 8080
-        # Health checks to ensure the container is running and ready
         livenessProbe:
           httpGet:
             path: /health
