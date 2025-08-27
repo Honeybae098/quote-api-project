@@ -1,8 +1,5 @@
 name: CI/CD Pipeline for Quote API
 
-# THIS IS THE SECTION WITH THE ERROR
-# Ensure 'push:' is indented with two spaces under 'on:'
-# Ensure 'branches:' is indented with two spaces under 'push:'
 on:
   push:
     branches: [ "main" ]
