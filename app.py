@@ -15,6 +15,7 @@ QUOTES = [
     {"author": "Eleanor Roosevelt", "quote": "The future belongs to those who believe in the beauty of their dreams."},
     {"author": "Nelson Mandela", "quote": "The greatest glory in living lies not in never falling, but in rising every time we fall."},
     {"author": "Your Name", "quote": "This is my live demo quote for my final presentation!"},
+    {"author": "Marie Curie", "quote": "Nothing in life is to be feared, it is only to be understood."}
 ]
 
 
